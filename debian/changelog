@@ -1,3 +1,9 @@
+kplex (1.4.1.1-1) buster; urgency=medium
+
+  * Debian
+
+ -- mgrouch <mgrouch@users.github.com>  Mon, 2 Nov 2020 05:55:14 -0400
+
 kplex (1.4.1-1buster~bionic1) bionic; urgency=medium
 
   * Initial release
