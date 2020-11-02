@@ -12,8 +12,10 @@
 # package maintainers to append LDFLAGS
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
+
 %:
     dh $@
+
 
 # dh_make generated override targets
 # This is example for Cmake (See https://bugs.debian.org/641051 )
