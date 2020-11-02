@@ -4,4 +4,4 @@ kplex
 core
 version.h
 !/etc/**/kplex
-
+!/usr/share/**/kplex
