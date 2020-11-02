@@ -3,3 +3,5 @@
 kplex
 core
 version.h
+!/debian/more/**/kplex
+
