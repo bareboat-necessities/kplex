@@ -1,5 +1,5 @@
 usr/bin/kplex usr/bin
 usr/share/man/man1/kplex.1.gz usr/share/man/man1
-more/kplex.conf etc
-more/kplex.init etc/init.d
-more/kplex.service usr/share/kplex
+etc/kplex.conf etc
+etc/init.d/kplex.init etc/init.d
+usr/share/kplex/kplex.service usr/share/kplex
