@@ -14,7 +14,11 @@
 
 
 %:
-    dh $@
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr
+
 
 
 # dh_make generated override targets
