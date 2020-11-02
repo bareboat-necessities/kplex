@@ -45,6 +45,7 @@ version.h:
 install: kplex
 	test -d "$(BINDIR)"  || install -d -g $(INSTGROUP) -o root -m 755 $(BINDIR)
 	install -g $(INSTGROUP) -o root -m 755 kplex $(BINDIR)/kplex
+	install -d -g $(INSTGROUP) -o root -m 755 $(MANDIR)
 	test -d $(MANDIR)/man1 && gzip -c kplex.1 > $(MANDIR)/man1/kplex.1.gz
 
 uninstall:
