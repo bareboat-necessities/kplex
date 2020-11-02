@@ -1,0 +1,15 @@
+Source: kplex
+Section: misc
+Priority: optional
+Maintainer: Sailoog <info@sailoog.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: http://www.stripydog.com/kplex/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/kplex.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/kplex.git
+
+Package: kplex
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A multiplexer for various nmea 0183 interfaces
+ kplex is a multitransport software data multiplexer which runs on GNU/Linux, Mac OS X, FreeBSD, NetBSD and OpenWRT. It works with data which conform to the NMEA-0183 standard, but has been written without reference to any proprietary documentation not available in the public domain. Kplex multiplexes data inputs from sources such as serial lines, pseudo terminals and network interfaces and send to any (reasonable) number of outputs. kplex can perform filtering of inputs (so you only get the data you want, or don't get the data you don't want from a given source) and outputs (so you only send what you want where you want) and can perform fine-grained failover so that for any given type of data, you specify a priority order of the source you would like to take it from.
