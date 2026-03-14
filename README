@@ -60,6 +60,33 @@ in this README file for how to create a confiuration file.  A quick start
 example which bridges between a tcp server and a 38400 baud serial-to-usb
 connection is commented out in this example file.
 
+Using GitHub Release APT packages (build.yml)
+---------------------------------------------
+The GitHub Actions workflow at `.github/workflows/build.yml` builds Debian
+packages for amd64 and arm64 on every tag matching `v*`, then publishes a flat
+APT repository (`Packages`, `Packages.gz`, `Release`) to the GitHub release tag
+`apt`.
+
+To install from that repository on Debian/Ubuntu, add a source list entry
+pointing at the release assets for the `apt` tag:
+
+    sudo tee /etc/apt/sources.list.d/kplex-github-release.list >/dev/null <<'EOF'
+    deb [trusted=yes] https://github.com/stripydog/kplex/releases/download/apt ./
+    EOF
+
+Then update package indexes and install:
+
+    sudo apt-get update
+    sudo apt-get install kplex
+
+Notes:
+* This is a flat repository, so the distribution/component is `./`.
+* The repository is currently unsigned, so `[trusted=yes]` is required unless
+  you mirror and sign it yourself.
+* If apt does not refresh immediately due to caching, run:
+
+      sudo apt-get update -o Acquire::https::No-Cache=true
+
 Invocation:
 -----------
 
